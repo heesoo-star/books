@@ -264,18 +264,19 @@
   </footer>
 
 <script>
-  // 펼침 기능 제어
   const headers = document.querySelectorAll('.unit-header');
+
   headers.forEach(header => {
     header.addEventListener('click', () => {
       const content = header.nextElementSibling;
       const isActive = header.classList.contains('active');
 
-      // 클릭한 항목만 토글 (다른 항목은 유지)
       if (isActive) {
+        // 이미 열려 있다면 닫기
         header.classList.remove('active');
         content.style.display = 'none';
       } else {
+        // 닫혀 있다면 열기
         header.classList.add('active');
         content.style.display = 'block';
       }
@@ -285,6 +286,7 @@
 
 </body>
 </html>
+
 
 
 
